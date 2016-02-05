@@ -17,7 +17,8 @@ public class TeleportPlayer : MonoBehaviour
 		{
 			Debug.Log ("Pressed");
 
-			GameObject.Find ("Player").transform.position = new Vector3 (35, 100, 5);
+			GameObject.Find("Player").transform.Rotate (GameObject.Find("Player").transform.rotation.x, GameObject.Find("Player").transform.rotation.y, 180);
+//			GameObject.Find ("Player").transform.position = new Vector3 (35, 100, 5);
 
 		}
 	}

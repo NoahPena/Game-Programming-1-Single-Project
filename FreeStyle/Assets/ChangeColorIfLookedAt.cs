@@ -3,11 +3,13 @@ using System.Collections;
 
 public class ChangeColorIfLookedAt : MonoBehaviour 
 {
+	GameObject player;
+	bool once = false;
 
 	// Use this for initialization
 	void Start () 
 	{
-
+		player = GameObject.Find ("Player");
 	}
 
 	// Update is called once per frame
@@ -25,15 +27,19 @@ public class ChangeColorIfLookedAt : MonoBehaviour
 			{
 				GameObject hitObject = hit.transform.gameObject;
 					
-				if(hitObject == gameObject)
+				if(hitObject == gameObject && !once)
 				{
+					once = true;
+					Physics.gravity = new Vector3 (0, Physics.gravity.y * -1, 0);
 					gameObject.GetComponent<Renderer> ().material.color = Color.blue;
-					GameObject.Find ("Player").transform.position = new Vector3 (35, 16, 5);
+					player.transform.position = new Vector3 (player.transform.position.x, 10, player.transform.position.z);
+
 				}
 			}
 			else
 			{
-				gameObject.GetComponent<Renderer>().material.color = Color.white;
+			//	gameObject.GetComponent<Renderer>().material.color = Color.white;
+			//	player.transform.position = new Vector3 (player.transform.position.x, 2, player.transform.position.z);
 			}
 		}
 
