@@ -16,7 +16,8 @@ public class TeleportPlayer : MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.P)) 
 		{
 			Debug.Log ("Pressed");
-			this.transform.position.Set (this.transform.position.x, this.transform.position.y + 100, this.transform.position.z);
+
+			GameObject.Find ("Player").transform.position = new Vector3 (35, 100, 5);
 
 		}
 	}

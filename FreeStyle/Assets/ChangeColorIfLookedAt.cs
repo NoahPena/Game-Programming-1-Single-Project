@@ -15,7 +15,7 @@ public class ChangeColorIfLookedAt : MonoBehaviour
 	{
 		Vector3 moveDirection = Camera.main.transform.forward;
 
-		Debug.Log (moveDirection);
+		//Debug.Log (moveDirection);
 
 		RaycastHit hit;
 		Vector3 CameraCenter = Camera.main.ScreenToWorldPoint (new Vector3 (Screen.width / 2, Screen.height / 2, Camera.main.nearClipPlane));
@@ -28,6 +28,7 @@ public class ChangeColorIfLookedAt : MonoBehaviour
 				if(hitObject == gameObject)
 				{
 					gameObject.GetComponent<Renderer> ().material.color = Color.blue;
+					GameObject.Find ("Player").transform.position = new Vector3 (35, 16, 5);
 				}
 			}
 			else
