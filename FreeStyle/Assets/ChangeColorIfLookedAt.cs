@@ -23,13 +23,15 @@ public class ChangeColorIfLookedAt : MonoBehaviour
 		Vector3 CameraCenter = Camera.main.ScreenToWorldPoint (new Vector3 (Screen.width / 2, Screen.height / 2, Camera.main.nearClipPlane));
 		if (Physics.Raycast(CameraCenter,  Camera.main.transform.forward, out hit, 100))
 		{
-			if(Camera.main.transform.forward.y >= .9)
+			Debug.Log ((Camera.main.transform.forward.y >= .85) + " " + Camera.main.transform.forward.y);
+			if(Camera.main.transform.forward.y >= .85)
 			{
 				GameObject hitObject = hit.transform.gameObject;
 					
 				if(hitObject == gameObject && !once)
 				{
 					once = true;
+					player.
 					Physics.gravity = new Vector3 (0, Physics.gravity.y * -1, 0);
 					gameObject.GetComponent<Renderer> ().material.color = Color.blue;
 					player.transform.position = new Vector3 (player.transform.position.x, 10, player.transform.position.z);
