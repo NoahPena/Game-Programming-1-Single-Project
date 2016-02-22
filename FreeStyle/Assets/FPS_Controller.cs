@@ -18,8 +18,10 @@ public class FPS_Controller : MonoBehaviour
 	void Update () 
 	{
 		CharacterController controller = GetComponent<CharacterController>();
+
 		// is the controller on the ground?
-		if (controller.isGrounded) {
+		if (controller.isGrounded) 
+		{
 			//Feed moveDirection with input.
 			moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 			moveDirection = transform.TransformDirection(moveDirection);
