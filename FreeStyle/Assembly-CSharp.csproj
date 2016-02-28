@@ -48,6 +48,7 @@
      <Compile Include="Assets\ChangeColorIfLookedAt.cs" />
      <Compile Include="Assets\FPS_Controller.cs" />
      <Compile Include="Assets\Free_Rocks\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\InvisibleWallToVisible.cs" />
      <Compile Include="Assets\RigidBodyFPSWalker.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />

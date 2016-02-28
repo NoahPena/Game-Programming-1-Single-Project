@@ -33,7 +33,7 @@ public class ChangeColorIfLookedAt : MonoBehaviour
 					once = true;
 					//Debug.Log (player.GetComponent<RigidBodyFPSWalker>());
 					player.GetComponent<RigidBodyFPSWalker> ().gravity *= -1;
-					player.transform.Rotate (GameObject.Find("Player").transform.rotation.x, GameObject.Find("Player").transform.rotation.y, 180);
+					//player.transform.Rotate (GameObject.Find("Player").transform.rotation.x, GameObject.Find("Player").transform.rotation.y, 180);
 					//player.GetComponent<CharacterController>().attachedRigidbody.MoveRotation(
 
 					//Physics.gravity = new Vector3 (0, Physics.gravity.y * -1, 0);
