@@ -7,8 +7,6 @@ Project("{6CEBA639-54A6-7C81-1D26-6032A6330AD5}") = "FreeStyle", "Assembly-CShar
 EndProject
 Project("{6CEBA639-54A6-7C81-1D26-6032A6330AD5}") = "FreeStyle", "Assembly-CSharp-Editor.csproj", "{0851F99B-EE03-C1BC-C204-6BB173327517}"
 EndProject
-Project("{6CEBA639-54A6-7C81-1D26-6032A6330AD5}") = "FreeStyle", "Assembly-UnityScript.unityproj", "{1D94317B-0657-75C3-23EB-42AD91EE372C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,10 +25,6 @@ Global
 		{0851F99B-EE03-C1BC-C204-6BB173327517}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0851F99B-EE03-C1BC-C204-6BB173327517}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0851F99B-EE03-C1BC-C204-6BB173327517}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1D94317B-0657-75C3-23EB-42AD91EE372C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1D94317B-0657-75C3-23EB-42AD91EE372C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1D94317B-0657-75C3-23EB-42AD91EE372C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1D94317B-0657-75C3-23EB-42AD91EE372C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
