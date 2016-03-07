@@ -13,6 +13,7 @@ public class RigidBodyFPSWalker : MonoBehaviour
 	public bool canJump = true;
 	public float jumpHeight = 2.0f;
 	public bool grounded = false;
+	private bool running = false;
 
 	void Start()
 	{
@@ -25,14 +26,29 @@ public class RigidBodyFPSWalker : MonoBehaviour
 		GetComponent<Rigidbody>().useGravity = false;
 	}
 
+	void Update()
+	{
+		if (Input.GetKeyDown (KeyCode.LeftShift)) 
+		{
+			running = true;
+			Debug.Log ("Running");
+		}
+		else if (Input.GetKeyUp (KeyCode.LeftShift)) 
+		{
+			running = false;
+			Debug.Log ("Not Running");
+		}
+	}
+
 	void FixedUpdate () 
 	{
 		if (grounded) 
 		{
+
 			// Calculate how fast we should be moving
 			Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 			targetVelocity = transform.TransformDirection(targetVelocity);
-			targetVelocity *= speed;
+			targetVelocity *=  (running) ? speed * 2 : speed;
 
 			// Apply a force that attempts to reach our target velocity
 			Vector3 velocity = GetComponent<Rigidbody>().velocity;
@@ -47,6 +63,8 @@ public class RigidBodyFPSWalker : MonoBehaviour
 			{
 				GetComponent<Rigidbody>().velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
 			}
+
+
 		}
 
 		// We apply gravity manually for more tuning control
