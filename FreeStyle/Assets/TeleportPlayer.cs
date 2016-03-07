@@ -15,7 +15,7 @@ public class TeleportPlayer : MonoBehaviour
 	{
 		if (Input.GetKeyDown (KeyCode.P)) 
 		{
-			Debug.Log ("Pressed");
+			//Debug.Log ("Pressed");
 
 			Camera.main.transform.LookAt (GameObject.Find ("cliff").transform);
 

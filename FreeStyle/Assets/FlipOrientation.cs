@@ -29,7 +29,7 @@ public class FlipOrientation : MonoBehaviour
 		if (Physics.Raycast (cameraCenter, Camera.main.transform.forward, out middle, 100)
 		    && Physics.Raycast (topLeft, out topLeftHit) && Physics.Raycast (topRight, out topRightHit)
 		    && Physics.Raycast (botLeft, out botLeftHit) && Physics.Raycast (botRight, out botRightHit)) {
-			Debug.Log (Camera.main.transform.forward.y);
+			//Debug.Log (Camera.main.transform.forward.y);
 
 			if ((Camera.main.transform.forward.y >= .9) && grounded && gameObject.GetComponent<RigidBodyFPSWalker>().gravity == 10f) {
 				GameObject topLeftObject = topLeftHit.transform.gameObject;
